@@ -6,7 +6,7 @@ services:
     build: .
     restart: always
     ports:
-      - "127.0.0.1:3003:3003"
+      - "3003:3003"
     tty: true
     volumes:
       - ./:/usr/app
@@ -20,4 +20,4 @@ services:
     container_name: dbcrud_mobile
     restart: always
     ports:
-      - "127.0.0.1:27018:27018"
+      - "27018:27018"
