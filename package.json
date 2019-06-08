@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-creating-restful-apis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2 start server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.5.8",
+    "pm2": "^3.5.0"
+  }
+}

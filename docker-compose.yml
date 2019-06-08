@@ -1,0 +1,23 @@
+version: "3"
+services:
+  app:
+    container_name: crud_mobile
+    image: node:10.15.0-alpine
+    build: .
+    restart: always
+    ports:
+      - "127.0.0.1:3003:3003"
+    tty: true
+    volumes:
+      - ./:/usr/app
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: "npx pm2 start ecosystem.config.js --no-daemon"
+  db:
+    image: mongo:4.0.5-xenial
+    container_name: dbcrud_mobile
+    restart: always
+    ports:
+      - "127.0.0.1:27017:27017"
