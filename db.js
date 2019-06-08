@@ -1,9 +1,6 @@
 var mongoose = require("mongoose");
 
-const uri = process.env.NODE_ENV === 'production' ?
-  "mongodb+srv://dbSio:sio@dbcloud-rvfh0.mongodb.net/gps_mobile?retryWrites=true":
-  "mongodb://db:27018/gps_mobile"
-
+const uri = "mongodb+srv://dbSio:sio@dbcloud-rvfh0.mongodb.net/gps_mobile?retryWrites=true"
 mongoose.connect(uri, { useNewUrlParser: true}, function(err){
   if(err){
     throw err

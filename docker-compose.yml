@@ -12,12 +12,4 @@ services:
       - ./:/usr/app
     environment:
       - NODE_ENV=development
-    depends_on:
-      - db
     command: "npx pm2 start ecosystem.config.js --no-daemon"
-  db:
-    image: mongo:4.0.5-xenial
-    container_name: dbcrud_mobile
-    restart: always
-    ports:
-      - "27018:27018"
