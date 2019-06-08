@@ -7,7 +7,7 @@ router.use(bodyParser.json());
 var User = require("../model/Pelanggan");
 
 // CREATES A NEW USER
-router.post("/", function(req, res) {
+router.post("/pelanggan", function(req, res) {
   User.create(
     {
       nama: req.body.nama,
@@ -31,7 +31,7 @@ router.post("/", function(req, res) {
 });
 
 // RETURNS ALL THE USERS IN THE DATABASE
-router.get("/", function(req, res) {
+router.get("/pelanggan", function(req, res) {
   User.find({}, function(err, users) {
     if (err)
       return res.status(500).send("There was a problem finding the users.");
@@ -40,7 +40,7 @@ router.get("/", function(req, res) {
 });
 
 // GETS A SINGLE USER FROM THE DATABASE
-router.get("/:id", function(req, res) {
+router.get("/pelanggan/:id", function(req, res) {
   User.findById(req.params.id, function(err, user) {
     if (err)
       return res.status(500).send("There was a problem finding the user.");
@@ -50,7 +50,7 @@ router.get("/:id", function(req, res) {
 });
 
 // DELETES A USER FROM THE DATABASE
-router.delete("/:id", function(req, res) {
+router.delete("/pelanggan/:id", function(req, res) {
   User.findByIdAndRemove(req.params.id, function(err, user) {
     if (err)
       return res.status(500).send("There was a problem deleting the user.");
@@ -59,7 +59,7 @@ router.delete("/:id", function(req, res) {
 });
 
 // UPDATES A SINGLE USER IN THE DATABASE
-router.put("/:id", function(req, res) {
+router.put("/pelanggan/:id", function(req, res) {
   User.findByIdAndUpdate(req.params.id, req.body, { new: true }, function(
     err,
     user

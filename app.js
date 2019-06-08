@@ -3,6 +3,6 @@ var app = express();
 var db = require('./db');
 
 var UserController = require('./controller/PelangganController');
-app.use('/users', UserController);
+app.use('/api', UserController);
 
 module.exports = app;
