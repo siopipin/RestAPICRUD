@@ -9,5 +9,4 @@ var AktivitasTransaksi = require("./controller/AktivitasTransController");
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
 app.use("/api", AktivitasTransaksi);
-app.use("/api", JenisTransaksi);
 module.exports = app;
