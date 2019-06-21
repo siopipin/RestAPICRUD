@@ -7,5 +7,5 @@ var SkemaAktivitasTransaksi = new mongoose.Schema({
   tanggal_transaksi: Date
 });
 
-mongoose.model("AktivitasTransaksi", SkemaTransaksi);
+mongoose.model("AktivitasTransaksi", SkemaAktivitasTransaksi);
 module.exports = mongoose.model("AktivitasTransaksi");
