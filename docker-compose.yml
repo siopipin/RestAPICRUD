@@ -6,10 +6,19 @@ services:
     build: .
     restart: always
     ports:
-      - "3003:3003"
+      - "127.0.0.1:3003:3003"
     tty: true
     volumes:
       - ./:/usr/app
     environment:
       - NODE_ENV=development
+    epends_on:
+      - db
     command: "npx pm2 start ecosystem.config.js --no-daemon"
+
+  db:
+    image: mongo:4.0.5-xenial
+    container_name: dbmobile
+    restart: always
+    ports:
+      - "127.0.0.1:37017:27017"

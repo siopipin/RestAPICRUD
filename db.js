@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-const uri = "mongodb+srv://dbSio:sio@dbcloud-rvfh0.mongodb.net/gps_mobile?retryWrites=true"
+const uri = "mongodb://db:37017/dbbulking"
 mongoose.connect(uri, { useNewUrlParser: true}, function(err){
   if(err){
     throw err
