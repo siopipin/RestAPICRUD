@@ -12,7 +12,7 @@ services:
       - ./:/usr/app
     environment:
       - NODE_ENV=development
-    epends_on:
+    depends_on:
       - db
     command: "npx pm2 start ecosystem.config.js --no-daemon"
 
