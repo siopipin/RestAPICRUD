@@ -37,10 +37,10 @@ router.get("/aktivitastransaksi", function(req, res) {
 
 // GETS A SINGLE USER FROM THE DATABASE
 router.get("/aktivitastransaksi/:id", function(req, res) {
-  AktivitasTransaksi.findById(req.params.id, function(err, dana) {
+  AktivitasTransaksi.findById(req.params.id, function(err, data) {
     if (err)
       return res.status(500).send("There was a problem finding the data.");
-    if (!dana) return res.status(404).send("No data found.");
+    if (!data) return res.status(404).send("No data found.");
     res.status(200).send(data);
   });
 });
