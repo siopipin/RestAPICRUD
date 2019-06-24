@@ -11,6 +11,8 @@ router.post("/aktivitastransaksi", function(req, res) {
     {
       nama_aktivitas: req.body.nama_aktivitas,
       kode: req.body.kode,
+      tujuan: req.body.tujuan,
+      asal: req.body.asal,
       nominal: req.body.nominal,
       tanggal_transaksi: req.body.tanggal_transaksi
     },
