@@ -7,10 +7,12 @@ var RingkasanController = require("./controller/RingkasanController");
 var JenisTransaksi = require("./controller/JenisTransaksiController");
 var AktivitasTransaksi = require("./controller/AktivitasTransController");
 var RingkasBeli = require("./controller/RingkasPembelianController");
+const FakturBeli = require("./controller/FakturPembelian")
 
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
 app.use("/api", JenisTransaksi);
 app.use("/api", AktivitasTransaksi);
 app.use("/api", RingkasBeli);
+app.use("/api", FakturBeli);
 module.exports = app;
