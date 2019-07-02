@@ -61,7 +61,7 @@ router.delete("/fakturbeli/:id", function(req, res) {
 });
 
 // UPDATES A SINGLE USER IN THE DATABASE
-router.put("/fakturbeli/:id", function(req, res) {
+router.patch("/fakturbeli/:id", function(req, res) {
   FakturPembelian.findByIdAndUpdate(
     req.params.id,
     req.body,
