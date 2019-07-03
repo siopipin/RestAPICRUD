@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-var Biaya = require("../model/FakturPembelian");
+var Biaya = require("../model/biaya");
 
 router.post("/biaya", function(req, res) {
   Biaya.create(
