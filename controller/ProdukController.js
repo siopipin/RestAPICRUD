@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-var Produk = require("../model/FakturPembelian");
+var Produk = require("../model/produk");
 
 router.post("/produk", function(req, res) {
   Produk.create(
