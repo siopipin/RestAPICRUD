@@ -9,6 +9,7 @@ var AktivitasTransaksi = require("./controller/AktivitasTransController");
 var RingkasBeli = require("./controller/RingkasPembelianController");
 const FakturBeli = require("./controller/FakturPembelian")
 const Biaya = require('./controller/BiayaController')
+const Produk = require('./controller/ProdukController')
 
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
@@ -17,4 +18,5 @@ app.use("/api", AktivitasTransaksi);
 app.use("/api", RingkasBeli);
 app.use("/api", FakturBeli);
 app.use("/api", Biaya);
+app.use("/api", Produk);
 module.exports = app;
