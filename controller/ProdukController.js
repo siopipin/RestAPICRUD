@@ -12,9 +12,13 @@ router.post("/produk", function(req, res) {
       namaproduk: req.body.namaproduk,
       kodeproduk: req.body.kodeproduk,
       unit: req.body.unit,
+      satuan: req.body.satuan,
       deskripsi: req.body.deskripsi,
       beliproduk: req.body.beliproduk,
-      jualproduk: req.body.jualproduk
+      jualproduk: req.body.jualproduk,
+      hargabelisatuan: req.body.hargabelisatuan,
+      akunpembelian: req.body.akunpembelian,
+      pajakbeli: req.body.pajakbeli
     },
     function(err, data) {
       if (err)
