@@ -3,7 +3,7 @@ var SkemaProduk = new mongoose.Schema({
   namaproduk: String,
   kodeproduk : String,
   unit : String,
-  satuan: String,
+  satuan: Number,
   deskripsi : String,
   beliproduk: Boolean,
   jualproduk: Boolean,
