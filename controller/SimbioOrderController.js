@@ -7,7 +7,7 @@ router.use(bodyParser.json());
 var Order = require("../model/SimbioOrderModel");
 
 router.post("/order", function (req, res) {
-    Order.create(
+    Order.insertMany(
         {
             id_order: req.body.id_order,
             tanggal_mulai: req.body.tanggal_mulai,
