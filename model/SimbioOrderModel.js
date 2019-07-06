@@ -31,5 +31,5 @@ var SkemaAktivitasTransaksi = new mongoose.Schema({
 },
 );
 
-mongoose.model("AktivitasTransaksi", SkemaAktivitasTransaksi);
-module.exports = mongoose.model("AktivitasTransaksi");
+mongoose.model("SimbioOrder", SkemaAktivitasTransaksi);
+module.exports = mongoose.model("SimbioOrder");
