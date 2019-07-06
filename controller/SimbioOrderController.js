@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
-var Order = require("../model/AktivitasTransaksi");
+var Order = require("../model/SimbioOrderModel");
 
 router.post("/order", function (req, res) {
     Order.create(
