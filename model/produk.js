@@ -9,7 +9,10 @@ var SkemaProduk = new mongoose.Schema({
   jualproduk: Boolean,
   hargabelisatuan: Number,
   akunpembelian: String,
-  pajakbeli: Number
+  pajakbeli: Number,
+  hargajualsatuan: Number,
+  akunpenjualan: String,
+  pajakjual: Number
 });
 
 mongoose.model("Produk", SkemaProduk);

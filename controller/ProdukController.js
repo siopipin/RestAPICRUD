@@ -18,7 +18,10 @@ router.post("/produk", function(req, res) {
       jualproduk: req.body.jualproduk,
       hargabelisatuan: req.body.hargabelisatuan,
       akunpembelian: req.body.akunpembelian,
-      pajakbeli: req.body.pajakbeli
+      pajakbeli: req.body.pajakbeli,
+      hargajualsatuan: req.body.hargajualsatuan,
+      akunpenjualan: req.body.akunpenjualan,
+      pajakjual: req.body.pajakjual
     },
     function(err, data) {
       if (err)
