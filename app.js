@@ -12,6 +12,7 @@ const Biaya = require("./controller/BiayaController");
 const Produk = require("./controller/ProdukController");
 const Unit = require("./controller/UnitController");
 const Akun = require("./controller/AkunController");
+const OrderSimbio = require('./controller/SimbioOrderController');
 
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
@@ -23,4 +24,5 @@ app.use("/api", Biaya);
 app.use("/api", Produk);
 app.use("/api", Unit);
 app.use("/api", Akun);
+app.use("/mobile", OrderSimbio);
 module.exports = app;
