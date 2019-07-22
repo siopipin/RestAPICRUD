@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var db = require("./db");
+var cookieParser = require('cookie-parser');
 
 var UserController = require("./controller/PelangganController");
 var RingkasanController = require("./controller/RingkasanController");
@@ -14,6 +15,16 @@ const Unit = require("./controller/UnitController");
 const Akun = require("./controller/AkunController");
 const OrderSimbio = require('./controller/SimbioOrderController');
 
+
+var index = require('./routes/index');
+var user = require('./routes/user');
+var loginOnly = require('./routes/loginOnly');
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
 app.use("/api", JenisTransaksi);
@@ -25,4 +36,7 @@ app.use("/api", Produk);
 app.use("/api", Unit);
 app.use("/api", Akun);
 app.use("/mobile", OrderSimbio);
+app.use('/api/home', index);
+app.use('/api/user', user);
+app.use('/api/loginOnly', loginOnly);
 module.exports = app;
