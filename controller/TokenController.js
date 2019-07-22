@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Token = require("../model/Token");
 var User = require("../model/User");
 var jwt = require('jsonwebtoken');
-var config = require("../controller");
+var config = require("../config");
 
 var tokenController = {};
 
