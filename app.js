@@ -19,7 +19,6 @@ var index = require('./routes/index');
 var user = require('./routes/user');
 var loginOnly = require('./routes/loginOnly');
 
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
