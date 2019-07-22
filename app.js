@@ -1,7 +1,6 @@
 var express = require("express");
 var app = express();
 var db = require("./db");
-var cookieParser = require('cookie-parser');
 
 var UserController = require("./controller/PelangganController");
 var RingkasanController = require("./controller/RingkasanController");
@@ -23,7 +22,6 @@ var loginOnly = require('./routes/loginOnly');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
 
 app.use("/api", UserController);
 app.use("/api", RingkasanController);
