@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var db = require("./db");
+var bodyParser = require('body-parser');
 
 var UserController = require("./controller/PelangganController");
 var RingkasanController = require("./controller/RingkasanController");
